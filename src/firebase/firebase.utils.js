@@ -38,6 +38,7 @@ const config = {
     return userRef;
   }
 
+  // -- initialize
   firebase.initializeApp(config);
 
   export const auth = firebase.auth();
