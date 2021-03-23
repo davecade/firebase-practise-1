@@ -17,6 +17,7 @@ class App extends Component {
     }
   }
 
+  //-- sets default to null for unsubscribe from auth
   unsubscribeFromAuth = null;
 
   componentDidMount () {
