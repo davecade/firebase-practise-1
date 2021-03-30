@@ -27,6 +27,7 @@ class App extends Component {
 
         const userRef = await createUserProfileDocument(userAuth)
 
+        // -- Snapshot takes a snapshot of the database at the specific userRef location in Firebase
         userRef.onSnapshot(snapShot => {
           this.setState({
             currentUser: {
