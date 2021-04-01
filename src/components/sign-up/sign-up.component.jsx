@@ -21,7 +21,6 @@ class SignUp extends React.Component {
         event.preventDefault();
 
         const { displayName, email, password, confirmPassword } = this.state
-        console.log("DESTRUCT:", displayName, email, password, confirmPassword)
 
         if(password !== confirmPassword) {
             alert("password don't match")
@@ -30,10 +29,6 @@ class SignUp extends React.Component {
 
         try {
             const { user } = await auth.createUserWithEmailAndPassword(email, password)
-
-            console.log("FIRST", displayName)
-            console.log("SECOND", { displayName })
-            console.log(user)
 
             await createUserProfileDocument(user, { displayName })
  
@@ -55,7 +50,7 @@ class SignUp extends React.Component {
     handleChange = event => {
         const { name, value } = event.target;
         
-        this.setState({[name]: value})
+        this.setState({[name]: value},)
     }
 
 
